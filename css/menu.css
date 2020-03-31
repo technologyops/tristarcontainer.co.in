@@ -1,0 +1,36 @@
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);*/
+.clear { height: 100% }
+.clear:after { content: ''; display: block; clear: both }
+#menu {
+position:relative;
+z-index:100;
+}
+
+#menu, #menu ul { list-style: none; margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; }
+
+#menu em { color:#cfcfcf; font-weight:normal; }
+
+#menu li {  border-right: 0px solid #e7e7e7; position: relative; float: left; white-space: nowrap;}
+#menu li a { display: block; padding: 2px 14px; margin-right:6px; text-decoration: none; color: #000000; font-size:13px;   }
+
+#menu li a:hover { color:#ffffff; background:url(../images/menu_bg_hover.jpg) repeat-x;  }
+
+ #menu .current { color:#ffffff; background:url(../images/menu_bg_hover.jpg) repeat-x;   }
+ 
+
+#menu ul { background: #fff; display: none; position: absolute; border: 1px solid #f2eeee; border-top:0; }
+#menu ul li { background: #fff; border-top: 1px solid #f2eeee; border-right: 0px solid transparent; float: none; }
+
+#menu ul li a {  padding: 5px 10px; text-transform:none; color:#000000; min-width:120px;  } /*sub menu*/
+
+ #menu ul li a:hover {
+color:#ffffff;
+}
+ 
+#menu ul ul { top: -1px; left: 100% } /*sub sub menu*/
+
+#menu ul ul a {  padding: 5px 20px;  }
+
+#menu li.has_child { background:none; padding-right: 0px; }
+#menu li.hover  { }
+

@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tristar Container Services (Asia) Pvt. Ltd</title>
+<link href="css/style-bc.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+body {
+background:none;
+}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+function validate() 
+{ 
+  
+    var enquirytype=document.getElementById('enquirytype')
+	if(enquirytype.value=="1")
+	{
+		document.getElementById('checkenquirytype').innerHTML="<span style='color:red'>Enquiry Type</span>";
+		alert("Please select your type");
+		enquirytype.focus();
+		return false;
+	}
+	else
+	{
+		document.getElementById('checkenquirytype').innerHTML="<span style=''>Enquiry Type</span>";
+	}
+	
+	var productinterest=document.getElementById('productinterest')
+	if(productinterest.value=="None")
+	{
+		document.getElementById('checkproductinterest').innerHTML="<span style='color:red'>Product of Interest</span>";
+		alert("Please select your product interest");
+		productinterest.focus();
+		return false;
+	}
+	else
+	{
+		document.getElementById('checkproductinterest').innerHTML="<span style=''>Product of Interest</span>";
+	}
+	
+	var name=document.getElementById('name')
+	if(name.value=="")
+	{
+		document.getElementById('checkname').innerHTML="<span style='color:red'>Name</span>";
+		alert("Please enter your name");
+		name.focus();
+		return false;
+		
+	}
+	else
+	{
+		var numname = /^[a-zA-Z\séåü]+$/;
+		
+		if(!name.value.match(numname))
+		{
+		document.getElementById('checkname').innerHTML="<span style='color:red'>Name</span>";
+		alert("Please enter characters only");
+		document.getElementById('name').value="";
+		name.focus();
+		return false;
+		}
+		else
+		{
+		document.getElementById('checkname').innerHTML="<span style=''>Name</span>";
+		}	
+		
+		
+	}	
+		  
+	 
+	
+	var numbers = /^[0-9-]+$/;
+	var phone=document.getElementById('phone');
+	if(phone.value=="")
+	{
+	document.getElementById('checkphone').innerHTML="<span style='color:red;'>Contact Number</span>";
+	alert("Please enter your contact number");
+	document.getElementById('phone').value="";
+	phone.focus();
+	return false;
+	}
+	else
+	{		
+	if(!phone.value.match(numbers))
+			{
+				document.getElementById('checkphone').innerHTML="<span style='color:red;'>Contact Number</span>";
+				alert("Please enter numbers only");
+				document.getElementById('phone').value="";
+				phone.focus();
+				return false;
+			}
+		else
+			{
+				document.getElementById('checkphone').innerHTML="<span  >Contact Number</span>";
+			}
+	 }			    
+   
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+	var email=document.getElementById('email');	
+	if(email.value=="")
+	{
+		document.getElementById('checkemail').innerHTML="<span style='color:red;'>Email</span>";
+		alert("Please enter your E-mail address");
+		document.getElementById('email').value="";
+		email.focus();
+		return false;
+	}
+	else
+	{			
+	   if(!email.value.match(mailformat))
+				{
+					document.getElementById('checkemail').innerHTML="<span style='color:red;'>Email</span>";
+					alert("Please enter valid E-mail address");
+					document.getElementById('email').value="";
+					email.focus();
+					return false;
+				}
+			else
+				{
+					document.getElementById('checkemail').innerHTML="<span  >Email</span>";
+				}		
+	 }
+	
+	var country=document.getElementById('country')
+	if(country.value=="select")
+	{
+		document.getElementById('checkcountry').innerHTML="<span style='color:red'>Country</span>";
+		alert("Please select your country");
+		country.focus();
+		return false;
+	}
+	else
+	{
+		document.getElementById('checkcountry').innerHTML="<span style=''>Country</span>";
+	}
+	var enquiry=document.getElementById('enquiry')		 
+	if(enquiry.value=="")
+	{
+		document.getElementById('checkenquiry').innerHTML="<span style='color:red'>Enquiry</span>";
+		alert("Please enter your enquiry");
+		enquiry.focus();
+		return false;
+	}
+	else
+	{
+		document.getElementById('checkenquiry').innerHTML="<span style=''>Enquiry</span>";
+	}	 
+	
+}
+
+
+</script>
+  <form name="form" action="contact_process.php" method="post" onsubmit="return validate();">
+<table  border="0" cellpadding="0" cellspacing="0"  class="tables_none" style="border:1px solid #dddddd; width:380px">
+              <tbody>
+                
+                <tr >
+                  <td width="220" height="40" style="padding-top:10px;"> <div align="left" id="checkenquirytype">Enquiry Type </div></td>
+                  <td width="257" style="padding-top:10px;"><select name="enquirytype" id="enquirytype" class="mybox">
+                      <option value="1">Select a Service</option>
+                      <option value="Get a Quote">Get a Quote</option>
+                      <option value="Further Information">Further Information</option>
+                      <option value="Suggestion">Suggestion</option>
+                    </select>                  </td>
+                </tr>
+                <tr>
+                  <td height="40"> <div align="left" id="checkproductinterest">Product of Interest </div></td>
+                  <td><select name="productinterest" id="productinterest" class="mybox">
+                      <option value="None">None</option>
+                      <option value="General Purpose Dry Containers">General Purpose Dry Containers</option>
+                      <option value="High-Cube Containers ">High-Cube Containers </option>
+                      <option value="Accommodation &amp; Office Storage Units ">Accommodation &amp; Office Storage Units </option>
+                      <option value="Flat-Rack">Flat-Rack</option>
+                      <option value="Open-Top">Open-Top</option>
+                      <option value="Refrigerated and Insulated Containers">Refrigerated and Insulated Containers</option>
+                    </select>                  </td>
+                </tr>
+                <tr>
+                  <td width="220" height="40"> <div align="left" id="checkname">Name </div></td>
+                  <td><input name="name" type="text" id="name" class="mybox" />
+                      <br />
+                      <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator5" class="validate" style="color:White;display:none;">Please provide your full name</span> </td>
+                </tr>
+                <tr>
+                  <td height="40"> <div align="left" id="checkphone">Contact Number </div></td>
+                  <td><input name="phone" type="text" id="phone"class="mybox" />
+                      <br />
+                      <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator6" class="validate" style="color:White;display:none;">Please provide your contact number</span> </td>
+                </tr>
+                <tr>
+                  <td height="40"> <div align="left" id="checkemail">Email </div></td>
+                  <td><input name="email" type="text" id="email"class="mybox" />
+                      <br />
+                      <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator7" class="validate" style="color:White;display:none;">Please provide your email address</span> <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator2" class="validate" style="color:White;display:none;">Please provide a valid email address</span> </td>
+                </tr>
+                <tr>
+                  <td height="40"> <div align="left" id="checkcountry">Country </div></td>
+                  <td><select name="country" id="country" class="mybox">
+                      <option value="select">Select Country</option>
+                      <option value="India">India</option>
+                                          </select>
+                      <span id="ctl00_ContentPlaceHolder1_CountryReq2" class="validate" style="color:White;display:none;">Please select a country</span> </td>
+                </tr>
+                <tr>
+                  <td height="40"> <div align="left" id="checkenquiry">Enquiry </div></td>
+                  <td><textarea name="enquiry" rows="5" cols="20" id="enquiry" class="mybox"></textarea>
+                      <br />
+                      <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator8" class="validate" style="color:White;display:none;">Please provide your comments or question</span> </td>
+                </tr>
+                <tr>
+                  <td height="40">&nbsp;</td>
+                  <td ><input type="submit" name="Send2" value="Submit Your Enquiry" id="Send2" class="button" />                  </td>
+                </tr>
+              </tbody>
+          </table> 
+  </form>  
+ 
+</body>
+</html>
